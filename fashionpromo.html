@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Couture - 50% Off Flash Sale</title>
+    <meta name="description" content="Don't miss out! 50% off all designer pieces at Bella Couture. Limited time flash sale ends soon!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="demo-page">
+    <!-- Demo Header -->
+    <div class="demo-header">
+        <div class="container">
+            <a href="portfolio.html" class="back-btn">← Back to Portfolio</a>
+            <span class="demo-label">Demo Landing Page</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="demo-hero fashion-hero">
+        <div class="container">
+            <div class="demo-hero-content">
+                <div class="urgency-badge">⚡ FLASH SALE - ENDS IN 24 HOURS!</div>
+                <h1 class="demo-hero-title">50% OFF Everything</h1>
+                <p class="demo-hero-subtitle">Designer pieces, luxury fabrics, and exclusive collections. This is your chance to upgrade your wardrobe without breaking the bank.</p>
+                <a href="https://wa.me/2349150674067?text=Hi%2C%20I%20want%20to%20shop%20the%20Bella%20Couture%20flash%20sale" class="demo-cta-btn urgent" target="_blank">Shop Now - Save 50%</a>
+                <p class="offer-details">Use code: FLASH50 • Free shipping on orders over ₦50,000</p>
+            </div>
+            <div class="demo-hero-image">
+                <img src="https://images.pexels.com/photos/934070/pexels-photo-934070.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Fashion Collection">
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Timer -->
+    <section class="countdown-section">
+        <div class="container">
+            <h3>Sale Ends In:</h3>
+            <div class="countdown-timer">
+                <div class="time-unit">
+                    <span class="time-number" id="hours">23</span>
+                    <span class="time-label">Hours</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="minutes">45</span>
+                    <span class="time-label">Minutes</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="seconds">30</span>
+                    <span class="time-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="demo-products">
+        <div class="container">
+            <h2 class="demo-section-title">What's On Sale</h2>
+            <div class="demo-products-grid">
+                <div class="demo-product">
+                    <img src="https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Designer Dress">
+                    <h3>Designer Dresses</h3>
+                    <p class="price"><span class="old-price">₦80,000</span> <span class="new-price">₦40,000</span></p>
+                </div>
+                <div class="demo-product">
+                    <img src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Luxury Bags">
+                    <h3>Luxury Handbags</h3>
+                    <p class="price"><span class="old-price">₦120,000</span> <span class="new-price">₦60,000</span></p>
+                </div>
+                <div class="demo-product">
+                    <img src="https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Shoes">
+                    <h3>Designer Shoes</h3>
+                    <p class="price"><span class="old-price">₦60,000</span> <span class="new-price">₦30,000</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="demo-testimonial">
+        <div class="container">
+            <div class="testimonial-content">
+                <blockquote>
+                    "I saved over ₦200,000 during their last flash sale! The quality is amazing and the pieces are absolutely gorgeous. Don't sleep on this!"
+                </blockquote>
+                <cite>- Kemi A., Abuja</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="demo-final-cta urgent-cta">
+        <div class="container">
+            <div class="final-cta-content">
+                <h2>Don't Miss Out - Sale Ends Soon!</h2>
+                <p>Join 500+ happy customers who've already saved big this week</p>
+                <a href="https://wa.me/2349150674067?text=Hi%2C%20I%20want%20to%20shop%20the%20Bella%20Couture%20flash%20sale" class="demo-cta-btn large urgent" target="_blank">Shop Now - Save 50%</a>
+                <p class="guarantee">Secure checkout • 14-day returns • Authentic designer pieces only</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Footer -->
+    <footer class="demo-footer">
+        <div class="container">
+            <p>This is a demo landing page created by <a href="index.html">Exemplar</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple countdown timer animation
+        function updateCountdown() {
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+            
+            let hours = parseInt(hoursEl.textContent);
+            let minutes = parseInt(minutesEl.textContent);
+            let seconds = parseInt(secondsEl.textContent);
+            
+            seconds--;
+            
+            if (seconds < 0) {
+                seconds = 59;
+                minutes--;
+                
+                if (minutes < 0) {
+                    minutes = 59;
+                    hours--;
+                    
+                    if (hours < 0) {
+                        hours = 23;
+                    }
+                }
+            }
+            
+            hoursEl.textContent = hours.toString().padStart(2, '0');
+            minutesEl.textContent = minutes.toString().padStart(2, '0');
+            secondsEl.textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
